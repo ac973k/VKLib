@@ -39,12 +39,12 @@
 - [ ] Search
 - [ ] Secure
 - [ ] Stats
-- [ ] Status
+- [x] Status
 - [ ] Storage
 - [ ] Store
 - [ ] Stories
 - [ ] Streaming
-- [ ] Translations
+- [x] Translations
 - [ ] Users
 - [ ] Utils
 - [ ] Video

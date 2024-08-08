@@ -13,6 +13,8 @@ SOURCES += \
     $$PWD/src/Auth/VKAuth.cpp \
     $$PWD/src/Groups/Groups.cpp \
     $$PWD/src/Photos/Photos.cpp \
+    $$PWD/src/Status/Status.cpp \
+    $$PWD/src/Translations/Translations.cpp \
     $$PWD/src/Wall/Wall.cpp
 
 HEADERS += \
@@ -20,6 +22,8 @@ HEADERS += \
     $$PWD/src/Auth/VKAuth.h \
     $$PWD/src/Groups/Groups.h \
     $$PWD/src/Photos/Photos.h \
+    $$PWD/src/Status/Status.h \
+    $$PWD/src/Translations/Translations.h \
     $$PWD/src/Wall/Wall.h
 
 # Default rules for deployment.
