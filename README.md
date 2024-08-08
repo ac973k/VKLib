@@ -44,7 +44,7 @@
 - [ ] Store
 - [ ] Stories
 - [ ] Streaming
-- [ ] Translations
+- [x] Translations
 - [ ] Users
 - [ ] Utils
 - [ ] Video
