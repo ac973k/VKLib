@@ -208,5 +208,19 @@ namespace VK {
             QNetworkReply* reply = networkManager.get(request);
             connect(reply, &QNetworkReply::finished, this, &Account::Finished);
         }
+
+        void Account::setPushSettings(const QString &access_token, const QString &device_id, const QString &settings, const QString &key, const QString &value)
+        {
+            QUrl link(QString("https://api.vk.com/method/account.setPushSettings?access_token=%1&device_id=%2&settings=%3&key=%4&value=%5&v=5.131")
+                          .arg(access_token)
+                          .arg(device_id)
+                          .arg(settings)
+                          .arg(key)
+                          .arg(value));
+            qDebug() << "url with token: " << link;
+            QNetworkRequest request(link);
+            QNetworkReply* reply = networkManager.get(request);
+            connect(reply, &QNetworkReply::finished, this, &Account::Finished);
+        }
     }
 }

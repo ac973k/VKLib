@@ -22,7 +22,7 @@
     - [x] account.setInfo
     - [x] account.setOffline
     - [x] account.setOnline
-    - [ ] account.setPushSettings
+    - [x] account.setPushSettings
     - [ ] account.setSilenceMode
     - [ ] account.unban
     - [ ] account.unregisterDevice
