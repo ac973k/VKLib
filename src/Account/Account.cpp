@@ -222,5 +222,37 @@ namespace VK {
             QNetworkReply* reply = networkManager.get(request);
             connect(reply, &QNetworkReply::finished, this, &Account::Finished);
         }
+
+        void Account::setSilenceMode(const QString &access_token, const QString &device_id, const QString &time, const QString &peer_id, const QString &sound)
+        {
+            QUrl link(QString("https://api.vk.com/method/account.setSilenceMode?access_token=%1&device_id=%2&time=%3&peer_id=%4&sound=%5&v=5.131")
+                          .arg(access_token)
+                          .arg(device_id)
+                          .arg(time)
+                          .arg(peer_id)
+                          .arg(sound));
+            qDebug() << "url with token: " << link;
+            QNetworkRequest request(link);
+            QNetworkReply* reply = networkManager.get(request);
+            connect(reply, &QNetworkReply::finished, this, &Account::Finished);
+        }
+
+        void Account::unban(const QString &access_token, const QString &owner_id)
+        {
+            QUrl link(QString("https://api.vk.com/method/account.unban?access_token=%1&owner_id=%2&v=5.131").arg(access_token).arg(owner_id));
+            qDebug() << "full url: " << link;
+            QNetworkRequest request(link);
+            QNetworkReply* reply = networkManager.get(request);
+            connect(reply, &QNetworkReply::finished, this, &Account::Finished);
+        }
+
+        void Account::unregisterDevice(const QString &access_token, const QString &device_id)
+        {
+            QUrl link(QString("https://api.vk.com/method/account.unregisterDevice?access_token=%1&device_id=%2&v=5.131").arg(access_token).arg(device_id));
+            qDebug() << "full url: " << link;
+            QNetworkRequest request(link);
+            QNetworkReply* reply = networkManager.get(request);
+            connect(reply, &QNetworkReply::finished, this, &Account::Finished);
+        }
     }
 }

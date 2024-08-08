@@ -7,23 +7,49 @@
 ### Что сделано:
 
 - [x] Auth
-- [ ] Account
-    - [x] account.ban
-    - [x] account.changePassword
-    - [x] account.getActiveOffers
-    - [x] account.getAppPermissions
-    - [x] account.getBanned
-    - [x] account.getCounters
-    - [x] account.getInfo
-    - [x] account.getProfileInfo
-    - [x] account.getPushSettings
-    - [x] account.registerDevice
-    - [x] account.saveProfileInfo
-    - [x] account.setInfo
-    - [x] account.setOffline
-    - [x] account.setOnline
-    - [x] account.setPushSettings
-    - [ ] account.setSilenceMode
-    - [ ] account.unban
-    - [ ] account.unregisterDevice
-etc...
+- [x] Account
+- [ ] Ads
+- [ ] AppWidgets
+- [ ] Apps
+- [ ] Asr
+- [ ] Board
+- [ ] Bugtracker
+- [ ] Calls
+- [ ] Database
+- [ ] Docs
+- [ ] Donut
+- [ ] DownloadedGames
+- [ ] Fave
+- [ ] Friends
+- [ ] Gifts
+- [ ] Groups
+- [ ] LeadForms
+- [ ] Likes
+- [ ] Market
+- [ ] Messages
+- [ ] Newsfeed
+- [ ] Notes
+- [ ] Notifications
+- [ ] Orders
+- [ ] Pages
+- [ ] Photos
+- [ ] Podcasts
+- [ ] Polls
+- [ ] PrettyCards
+- [ ] Search
+- [ ] Secure
+- [ ] Stats
+- [ ] Status
+- [ ] Storage
+- [ ] Store
+- [ ] Stories
+- [ ] Streaming
+- [ ] Translations
+- [ ] Users
+- [ ] Utils
+- [ ] Video
+- [ ] Wall
+- [ ] Widgets
+
+
+### etc...
