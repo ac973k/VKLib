@@ -39,7 +39,7 @@
 - [ ] Search
 - [ ] Secure
 - [ ] Stats
-- [ ] Status
+- [x] Status
 - [ ] Storage
 - [ ] Store
 - [ ] Stories
