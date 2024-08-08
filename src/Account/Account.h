@@ -36,6 +36,10 @@ namespace VK {
             void setInfo(const QString &access_token, const QString &name, const QString &value);
             void setOffline(const QString &access_token);
             void setOnline(const QString &access_token);
+            void setPushSettings(const QString &access_token, const QString &device_id, const QString &settings, const QString &key, const QString &value);
+            void setSilenceMode(const QString &access_token, const QString &device_id, const QString &time, const QString &peer_id, const QString &sound);
+            void unban(const QString &access_token, const QString &owner_id);
+            void unregisterDevice(const QString &access_token, const QString &device_id);
 
         private:
             QNetworkAccessManager networkManager;
