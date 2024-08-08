@@ -17,10 +17,10 @@ namespace VK {
             qDebug() << "full url: " << link;
             QNetworkRequest request(link);
             QNetworkReply* reply = networkManager.get(request);
-            connect(reply, &QNetworkReply::finished, this, &Account::banFinished);
+            connect(reply, &QNetworkReply::finished, this, &Account::Finished);
         }
 
-        void Account::banFinished() {
+        void Account::Finished() {
             QNetworkReply *reply = qobject_cast<QNetworkReply*>(sender());
             if (!reply) {
                 return;
@@ -29,13 +29,13 @@ namespace VK {
             if (reply->error() != QNetworkReply::NoError) {
                 result = reply->errorString();
                 qDebug() << "Error:" << result;
-                emit banCompleted(result);
+                emit Completed(result);
                 reply->deleteLater();
                 return;
             }
 
             result = reply->readAll();
-            emit banCompleted(result);
+            emit Completed(result);
             reply->deleteLater();
         }
 
@@ -49,7 +49,7 @@ namespace VK {
             qDebug() << "full url: " << link;
             QNetworkRequest request(link);
             QNetworkReply* reply = networkManager.get(request);
-            connect(reply, &QNetworkReply::finished, this, &Account::changePasswordFinished);
+            connect(reply, &QNetworkReply::finished, this, &Account::Finished);
         }
 
         void Account::changePassword(const QString &access_token, const QString &old_password, const QString &new_password) {
@@ -60,26 +60,7 @@ namespace VK {
             qDebug() << "full url: " << link;
             QNetworkRequest request(link);
             QNetworkReply* reply = networkManager.get(request);
-            connect(reply, &QNetworkReply::finished, this, &Account::changePasswordFinished);
-        }
-
-        void Account::changePasswordFinished() {
-            QNetworkReply *reply = qobject_cast<QNetworkReply*>(sender());
-            if (!reply) {
-                return;
-            }
-
-            if (reply->error() != QNetworkReply::NoError) {
-                result = reply->errorString();
-                qDebug() << "Error:" << result;
-                emit changePasswordCompleted(result);
-                reply->deleteLater();
-                return;
-            }
-
-            result = reply->readAll();
-            emit changePasswordCompleted(result);
-            reply->deleteLater();
+            connect(reply, &QNetworkReply::finished, this, &Account::Finished);
         }
 
         void Account::getActiveOffers(const QString &access_token) {
@@ -87,7 +68,7 @@ namespace VK {
             qDebug() << "url with token: " << link;
             QNetworkRequest request(link);
             QNetworkReply* reply = networkManager.get(request);
-            connect(reply, &QNetworkReply::finished, this, &Account::getActiveOffersFinished);
+            connect(reply, &QNetworkReply::finished, this, &Account::Finished);
         }
 
         void Account::getActiveOffers(const QString &access_token, const QString &offset, const QString &count) {
@@ -95,26 +76,7 @@ namespace VK {
             qDebug() << "url with token: " << link;
             QNetworkRequest request(link);
             QNetworkReply* reply = networkManager.get(request);
-            connect(reply, &QNetworkReply::finished, this, &Account::getActiveOffersFinished);
-        }
-
-        void Account::getActiveOffersFinished() {
-            QNetworkReply *reply = qobject_cast<QNetworkReply*>(sender());
-            if (!reply) {
-                return;
-            }
-
-            if (reply->error() != QNetworkReply::NoError) {
-                result = reply->errorString();
-                qDebug() << "Error getting info:" << result;
-                emit getActiveOffersCompleted(result);
-                reply->deleteLater();
-                return;
-            }
-
-            result = reply->readAll();
-            emit getActiveOffersCompleted(result);
-            reply->deleteLater();
+            connect(reply, &QNetworkReply::finished, this, &Account::Finished);
         }
 
         void Account::getAppPermissions(const QString &access_token, const QString &user_id) {
@@ -122,26 +84,7 @@ namespace VK {
             qDebug() << "url with token: " << link;
             QNetworkRequest request(link);
             QNetworkReply* reply = networkManager.get(request);
-            connect(reply, &QNetworkReply::finished, this, &Account::getAppPermissionsFinished);
-        }
-
-        void Account::getAppPermissionsFinished() {
-            QNetworkReply *reply = qobject_cast<QNetworkReply*>(sender());
-            if (!reply) {
-                return;
-            }
-
-            if (reply->error() != QNetworkReply::NoError) {
-                result = reply->errorString();
-                qDebug() << "Error getting info:" << result;
-                emit getAppPermissionsCompleted(result);
-                reply->deleteLater();
-                return;
-            }
-
-            result = reply->readAll();
-            emit getAppPermissionsCompleted(result);
-            reply->deleteLater();
+            connect(reply, &QNetworkReply::finished, this, &Account::Finished);
         }
 
         void Account::getBanned(const QString &access_token, const QString &offset, const QString &count) {
@@ -149,7 +92,7 @@ namespace VK {
             qDebug() << "url with token: " << link;
             QNetworkRequest request(link);
             QNetworkReply* reply = networkManager.get(request);
-            connect(reply, &QNetworkReply::finished, this, &Account::getBannedFinished);
+            connect(reply, &QNetworkReply::finished, this, &Account::Finished);
         }
 
         void Account::getBanned(const QString &access_token) {
@@ -157,55 +100,113 @@ namespace VK {
             qDebug() << "url with token: " << link;
             QNetworkRequest request(link);
             QNetworkReply* reply = networkManager.get(request);
-            connect(reply, &QNetworkReply::finished, this, &Account::getBannedFinished);
+            connect(reply, &QNetworkReply::finished, this, &Account::Finished);
         }
 
-        void Account::getBannedFinished() {
-            QNetworkReply *reply = qobject_cast<QNetworkReply*>(sender());
-            if (!reply) {
-                return;
-            }
-
-            if (reply->error() != QNetworkReply::NoError) {
-                result = reply->errorString();
-                qDebug() << "Error getting info:" << result;
-                emit getBannedCompleted(result);
-                reply->deleteLater();
-                return;
-            }
-
-            result = reply->readAll();
-            emit getBannedCompleted(result);
-            reply->deleteLater();
+        void Account::getCounters(const QString &access_token)
+        {
+            QUrl link(QString("https://api.vk.com/method/account.getCounters?access_token=%1&v=5.131").arg(access_token));
+            qDebug() << "url with token: " << link;
+            QNetworkRequest request(link);
+            QNetworkReply* reply = networkManager.get(request);
+            connect(reply, &QNetworkReply::finished, this, &Account::Finished);
         }
 
+        void Account::getCounters(const QString &access_token, const QString &filter)
+        {
+            QUrl link(QString("https://api.vk.com/method/account.getCounters?access_token=%1&filter=%2&v=5.131").arg(access_token).arg(filter));
+            qDebug() << "url with token: " << link;
+            QNetworkRequest request(link);
+            QNetworkReply* reply = networkManager.get(request);
+            connect(reply, &QNetworkReply::finished, this, &Account::Finished);
+        }
 
+        void Account::getInfo(const QString &access_token)
+        {
+            QUrl link(QString("https://api.vk.com/method/account.getInfo?access_token=%1&v=5.131").arg(access_token));
+            qDebug() << "url with token: " << link;
+            QNetworkRequest request(link);
+            QNetworkReply* reply = networkManager.get(request);
+            connect(reply, &QNetworkReply::finished, this, &Account::Finished);
+        }
+
+        void Account::getInfo(const QString &access_token, const QString &fields)
+        {
+            QUrl link(QString("https://api.vk.com/method/account.getCounters?access_token=%1&fields=%2&v=5.131").arg(access_token).arg(fields));
+            qDebug() << "url with token: " << link;
+            QNetworkRequest request(link);
+            QNetworkReply* reply = networkManager.get(request);
+            connect(reply, &QNetworkReply::finished, this, &Account::Finished);
+        }
 
         void Account::getProfileInfo(const QString &access_token) {
             QUrl link(QString("https://api.vk.com/method/account.getProfileInfo?access_token=%1&v=5.131").arg(access_token));
             qDebug() << "url with token: " << link;
             QNetworkRequest request(link);
             QNetworkReply* reply = networkManager.get(request);
-            connect(reply, &QNetworkReply::finished, this, &Account::getProfileInfoFinished);
+            connect(reply, &QNetworkReply::finished, this, &Account::Finished);
         }
 
-        void Account::getProfileInfoFinished() {
-            QNetworkReply *reply = qobject_cast<QNetworkReply*>(sender());
-            if (!reply) {
-                return;
-            }
+        void Account::getPushSettings(const QString &access_token, const QString &device_id)
+        {
+            QUrl link(QString("https://api.vk.com/method/account.getPushSettings?access_token=%1&device_id=%2&v=5.131").arg(access_token).arg(device_id));
+            qDebug() << "url with token: " << link;
+            QNetworkRequest request(link);
+            QNetworkReply* reply = networkManager.get(request);
+            connect(reply, &QNetworkReply::finished, this, &Account::Finished);
+        }
 
-            if (reply->error() != QNetworkReply::NoError) {
-                result = reply->errorString();
-                qDebug() << "Error getting info:" << result;
-                emit getProfileInfoCompleted(result);
-                reply->deleteLater();
-                return;
-            }
+        void Account::registerDevice(const QString &access_token, const QString &device_model, const QString &device_year, const QString &device_id, const QString &system_version, const QString &settings)
+        {
+            QUrl link(QString("https://api.vk.com/method/account.registerDevice?access_token=%1&device_model=%2&device_year=%3&device_id=%4&system_version=%5&settings=%6&v=5.131")
+                          .arg(access_token)
+                          .arg(device_model)
+                          .arg(device_year)
+                          .arg(device_id)
+                          .arg(system_version)
+                          .arg(settings));
+            qDebug() << "url with token: " << link;
+            QNetworkRequest request(link);
+            QNetworkReply* reply = networkManager.get(request);
+            connect(reply, &QNetworkReply::finished, this, &Account::Finished);
+        }
 
-            result = reply->readAll();
-            emit getProfileInfoCompleted(result);
-            reply->deleteLater();
+        void Account::saveProfileInfo(const QString &access_token, const QString &fields)
+        {
+            // fileds строка в которую добавляются значения из https://dev.vk.com/ru/method/account.saveProfileInfo
+            // Пример строки: Нам нужно изменить только имя и пол, то строка будет такого вида: "&first_name=Сергей&sex=2
+            QUrl link(QString("https://api.vk.com/method/account.saveProfileInfo?access_token=%1" + fields + "&v=5.131").arg(access_token));
+            qDebug() << "url with token: " << link;
+            QNetworkRequest request(link);
+            QNetworkReply* reply = networkManager.get(request);
+            connect(reply, &QNetworkReply::finished, this, &Account::Finished);
+        }
+
+        void Account::setInfo(const QString &access_token, const QString &name, const QString &value)
+        {
+            QUrl link(QString("https://api.vk.com/method/account.setInfo?access_token=%1&name=%2&value=%3&v=5.131").arg(access_token).arg(name).arg(value));
+            qDebug() << "url with token: " << link;
+            QNetworkRequest request(link);
+            QNetworkReply* reply = networkManager.get(request);
+            connect(reply, &QNetworkReply::finished, this, &Account::Finished);
+        }
+
+        void Account::setOffline(const QString &access_token)
+        {
+            QUrl link(QString("https://api.vk.com/method/account.setOffline?access_token=%1&v=5.131").arg(access_token));
+            qDebug() << "url with token: " << link;
+            QNetworkRequest request(link);
+            QNetworkReply* reply = networkManager.get(request);
+            connect(reply, &QNetworkReply::finished, this, &Account::Finished);
+        }
+
+        void Account::setOnline(const QString &access_token)
+        {
+            QUrl link(QString("https://api.vk.com/method/account.setOnline?access_token=%1&v=5.131").arg(access_token));
+            qDebug() << "url with token: " << link;
+            QNetworkRequest request(link);
+            QNetworkReply* reply = networkManager.get(request);
+            connect(reply, &QNetworkReply::finished, this, &Account::Finished);
         }
     }
 }

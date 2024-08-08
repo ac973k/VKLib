@@ -25,32 +25,27 @@ namespace VK {
             void getAppPermissions(const QString &access_token, const QString &user_id);
             void getBanned(const QString &access_token, const QString &offset, const QString &count);
             void getBanned(const QString &access_token);
-
-
+            void getCounters(const QString &access_token);
+            void getCounters(const QString &access_token, const QString &filter);
+            void getInfo(const QString &access_token);
+            void getInfo(const QString &access_token, const QString &fields);
             void getProfileInfo(const QString &access_token);
+            void getPushSettings(const QString &access_token, const QString &device_id);
+            void registerDevice(const QString &access_token, const QString &device_model, const QString &device_year, const QString &device_id, const QString &system_version, const QString &settings);
+            void saveProfileInfo(const QString &access_token, const QString &fields);
+            void setInfo(const QString &access_token, const QString &name, const QString &value);
+            void setOffline(const QString &access_token);
+            void setOnline(const QString &access_token);
 
         private:
             QNetworkAccessManager networkManager;
             QString result;
 
         signals:
-            void banCompleted(const QString &result);
-            void changePasswordCompleted(const QString &result);
-            void getActiveOffersCompleted(const QString &result);
-            void getAppPermissionsCompleted(const QString &result);
-            void getBannedCompleted(const QString &result);
+            void Completed(const QString &result);
 
-
-            void getProfileInfoCompleted(const QString &result);
         private slots:
-            void banFinished();
-            void changePasswordFinished();
-            void getActiveOffersFinished();
-            void getAppPermissionsFinished();
-            void getBannedFinished();
-
-
-            void getProfileInfoFinished();
+            void Finished();
         };
     }
 }
