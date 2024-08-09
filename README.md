@@ -17,7 +17,7 @@
 - [ ] Calls
 - [ ] Database
 - [ ] Docs
-- [ ] Donut
+- [x] Donut
 - [ ] DownloadedGames
 - [ ] Fave
 - [ ] Friends
