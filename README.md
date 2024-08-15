@@ -46,7 +46,7 @@
 - [ ] Streaming
 - [x] Translations
 - [ ] Users
-- [ ] Utils
+- [x] Utils
 - [ ] Video
 - [ ] Wall
 - [ ] Widgets

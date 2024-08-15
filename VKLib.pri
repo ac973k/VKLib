@@ -16,6 +16,7 @@ SOURCES += \
     $$PWD/src/Photos/Photos.cpp \
     $$PWD/src/Status/Status.cpp \
     $$PWD/src/Translations/Translations.cpp \
+    $$PWD/src/Utils/Utils.cpp \
     $$PWD/src/Wall/Wall.cpp
 
 HEADERS += \
@@ -26,6 +27,7 @@ HEADERS += \
     $$PWD/src/Photos/Photos.h \
     $$PWD/src/Status/Status.h \
     $$PWD/src/Translations/Translations.h \
+    $$PWD/src/Utils/Utils.h \
     $$PWD/src/Wall/Wall.h
 
 # Default rules for deployment.
