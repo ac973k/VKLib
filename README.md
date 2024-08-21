@@ -14,7 +14,7 @@
 - [ ] Asr
 - [ ] Board
 - [ ] Bugtracker
-- [ ] Calls
+- [x] Calls
 - [ ] Database
 - [ ] Docs
 - [x] Donut
