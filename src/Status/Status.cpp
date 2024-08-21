@@ -39,6 +39,15 @@ namespace VK {
             connect(reply, &QNetworkReply::finished, this, &Status::Finished);
         }
 
+        void Status::set(const QString &access_token, const QString &text)
+        {
+            QUrl link(QString("https://api.vk.com/method/status.set?access_token=%1&text=%2&v=5.131").arg(access_token).arg(text));
+            qDebug() << "full url: " << link;
+            QNetworkRequest request(link);
+            QNetworkReply* reply = networkManager.get(request);
+            connect(reply, &QNetworkReply::finished, this, &Status::Finished);
+        }
+
         void Status::Finished() {
             QNetworkReply *reply = qobject_cast<QNetworkReply*>(sender());
             if (!reply) {
