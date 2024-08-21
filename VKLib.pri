@@ -14,6 +14,7 @@ SOURCES += \
     $$PWD/src/Calls/Calls.cpp \
     $$PWD/src/Donut/Donut.cpp \
     $$PWD/src/DownloadedGames/DownloadedGames.cpp \
+    $$PWD/src/Gifts/Gifts.cpp \
     $$PWD/src/Groups/Groups.cpp \
     $$PWD/src/Photos/Photos.cpp \
     $$PWD/src/Status/Status.cpp \
@@ -27,6 +28,7 @@ HEADERS += \
     $$PWD/src/Calls/Calls.h \
     $$PWD/src/Donut/Donut.h \
     $$PWD/src/DownloadedGames/DownloadedGames.h \
+    $$PWD/src/Gifts/Gifts.h \
     $$PWD/src/Groups/Groups.h \
     $$PWD/src/Photos/Photos.h \
     $$PWD/src/Status/Status.h \
