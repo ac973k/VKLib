@@ -7,6 +7,11 @@ namespace VK {
 
         }
 
+        Calls::~Calls()
+        {
+
+        }
+
         void Calls::forceFinish(const QString &access_token, const QString &call_id)
         {
             QUrl link(QString("https://api.vk.com/method/calls.forceFinish?access_token=%1&call_id=%2&v=5.131").arg(access_token).arg(call_id));

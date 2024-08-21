@@ -18,7 +18,7 @@
 - [ ] Database
 - [ ] Docs
 - [x] Donut
-- [ ] DownloadedGames
+- [x] DownloadedGames
 - [ ] Fave
 - [ ] Friends
 - [ ] Gifts
