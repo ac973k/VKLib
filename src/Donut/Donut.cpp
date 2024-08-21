@@ -7,6 +7,10 @@ namespace VK {
 
         }
 
+        Donut::~Donut() {
+
+        }
+
         void Donut::getFriends(const QString &access_token, const QString &owner_id, const QString &count, const QString fields)
         {
             QUrl link(QString("https://api.vk.com/method/donut.getFriends?access_token=%1&owner_id=%2&count=%3&fields=%4&v=5.131").arg(access_token).arg(owner_id).arg(count).arg(fields));
