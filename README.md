@@ -21,7 +21,7 @@
 - [x] DownloadedGames
 - [ ] Fave
 - [ ] Friends
-- [ ] Gifts
+- [x] Gifts
 - [ ] Groups
 - [ ] LeadForms
 - [ ] Likes
