@@ -8,6 +8,10 @@ namespace VK {
 
         }
 
+        Utils::~Utils() {
+
+        }
+
         void Utils::checkLink(const QString &access_token, const QString &url)
         {
             QUrl link(QString("https://api.vk.com/method/utils.checkLink?access_token=%1&url=%2&v=5.131").arg(access_token).arg(url));

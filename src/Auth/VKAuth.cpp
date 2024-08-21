@@ -39,6 +39,7 @@ namespace VK {
                 if (!accessToken.isEmpty() && !userId.isEmpty()) {
                     result << accessToken << userId;
                     emit authCompleted(result);
+                    close();
                 } else {
                     qDebug() << "Access token or User ID is missing";
                 }
