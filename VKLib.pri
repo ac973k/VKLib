@@ -11,6 +11,7 @@ CONFIG += c++17
 SOURCES += \
     $$PWD/src/Account/Account.cpp \
     $$PWD/src/Auth/VKAuth.cpp \
+    $$PWD/src/Calls/Calls.cpp \
     $$PWD/src/Donut/Donut.cpp \
     $$PWD/src/Groups/Groups.cpp \
     $$PWD/src/Photos/Photos.cpp \
@@ -22,6 +23,7 @@ SOURCES += \
 HEADERS += \
     $$PWD/src/Account/Account.h \
     $$PWD/src/Auth/VKAuth.h \
+    $$PWD/src/Calls/Calls.h \
     $$PWD/src/Donut/Donut.h \
     $$PWD/src/Groups/Groups.h \
     $$PWD/src/Photos/Photos.h \
