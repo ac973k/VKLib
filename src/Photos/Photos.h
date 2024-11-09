@@ -7,6 +7,7 @@
 #include <QNetworkRequest>
 #include <QStringList>
 #include <QEventLoop>
+#include <QUrlQuery>
 
 namespace VK {
     namespace Photos {

@@ -18,6 +18,7 @@ SOURCES += \
     $$PWD/src/Groups/Groups.cpp \
     $$PWD/src/Photos/Photos.cpp \
     $$PWD/src/Status/Status.cpp \
+    $$PWD/src/Streaming/Streaming.cpp \
     $$PWD/src/Translations/Translations.cpp \
     $$PWD/src/Utils/Utils.cpp \
     $$PWD/src/Wall/Wall.cpp
@@ -32,6 +33,7 @@ HEADERS += \
     $$PWD/src/Groups/Groups.h \
     $$PWD/src/Photos/Photos.h \
     $$PWD/src/Status/Status.h \
+    $$PWD/src/Streaming/Streaming.h \
     $$PWD/src/Translations/Translations.h \
     $$PWD/src/Utils/Utils.h \
     $$PWD/src/Wall/Wall.h
@@ -40,3 +42,6 @@ HEADERS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+DISTFILES += \
+    $$PWD/README.md

@@ -43,7 +43,7 @@
 - [ ] Storage
 - [ ] Store
 - [ ] Stories
-- [ ] Streaming
+- [x] Streaming
 - [x] Translations
 - [ ] Users
 - [x] Utils

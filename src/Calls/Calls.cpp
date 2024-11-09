@@ -14,7 +14,7 @@ namespace VK {
 
         void Calls::forceFinish(const QString &access_token, const QString &call_id)
         {
-            QUrl link(QString("https://api.vk.com/method/calls.forceFinish?access_token=%1&call_id=%2&v=5.131").arg(access_token).arg(call_id));
+            QUrl link(QString("https://api.vk.com/method/calls.forceFinish?access_token=%1&call_id=%2&v=5.199").arg(access_token).arg(call_id));
             qDebug() << "full url: " << link;
             QNetworkRequest request(link);
             QNetworkReply* reply = networkManager.get(request);
@@ -23,7 +23,7 @@ namespace VK {
 
         void Calls::start(const QString &access_token, const QString &group_id)
         {
-            QUrl link(QString("https://api.vk.com/method/calls.start?access_token=%1&group_id=%2&v=5.131").arg(access_token).arg(group_id));
+            QUrl link(QString("https://api.vk.com/method/calls.start?access_token=%1&group_id=%2&v=5.199").arg(access_token).arg(group_id));
             qDebug() << "full url: " << link;
             QNetworkRequest request(link);
             QNetworkReply* reply = networkManager.get(request);

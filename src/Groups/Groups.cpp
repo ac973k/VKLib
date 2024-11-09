@@ -19,7 +19,7 @@ namespace VK {
         }
 
         QString Groups::getById(const QString &access_token, const QString &group_ids, const QString &fields) {
-            QUrl link(QString("https://api.vk.com/method/groups.getById?group_ids=%1&fields=%2&access_token=%3&v=5.131").arg(group_ids).arg(fields).arg(access_token));
+            QUrl link(QString("https://api.vk.com/method/groups.getById?group_ids=%1&fields=%2&access_token=%3&v=5.199").arg(group_ids).arg(fields).arg(access_token));
             qDebug() << "url with token: " << link;
             QNetworkRequest request(link);
             QNetworkReply* replys = networkManager.get(request);
