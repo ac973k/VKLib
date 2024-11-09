@@ -14,7 +14,7 @@ namespace VK {
 
         void DownloadedGames::getPaidStatus(const QString &access_token, const QString &user_id)
         {
-            QUrl link(QString("https://api.vk.com/method/downloadedGames.getPaidStatus?access_token=%1&user_id=%2&v=5.131").arg(access_token).arg(user_id));
+            QUrl link(QString("https://api.vk.com/method/downloadedGames.getPaidStatus?access_token=%1&user_id=%2&v=5.199").arg(access_token).arg(user_id));
             qDebug() << "full url: " << link;
             QNetworkRequest request(link);
             QNetworkReply* reply = networkManager.get(request);

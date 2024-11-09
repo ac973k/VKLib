@@ -6,6 +6,7 @@
 #include <QNetworkReply>
 #include <QNetworkRequest>
 #include <QEventLoop>
+#include <QUrlQuery>
 
 namespace VK {
     namespace Wall {

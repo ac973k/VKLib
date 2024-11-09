@@ -7,6 +7,7 @@
 #include <QNetworkRequest>
 #include <QUrl>
 #include <QEventLoop>
+#include <QUrlQuery>
 
 namespace VK {
     namespace Groups {

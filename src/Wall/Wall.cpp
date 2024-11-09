@@ -43,7 +43,7 @@ namespace VK {
             query.addQueryItem("donut_paid_duration", QString::number(donut_paid_duration));
             query.addQueryItem("mute_notifications", QString::number(mute_notifications));
             query.addQueryItem("copyright", copyright);
-            query.addQueryItem("v", "5.131");
+            query.addQueryItem("v", "5.199");
             url.setQuery(query);
 
             QNetworkRequest request(url);
@@ -73,7 +73,7 @@ namespace VK {
             query.addQueryItem("from_group", QString::number(from_group));
             query.addQueryItem("message", message);
             query.addQueryItem("attachments", attachments);
-            query.addQueryItem("v", "5.131");
+            query.addQueryItem("v", "5.199");
             url.setQuery(query);
 
             QNetworkRequest request(url);
@@ -102,7 +102,7 @@ namespace VK {
             query.addQueryItem("owner_id", QString::number(owner_id));
             query.addQueryItem("from_group", QString::number(from_group));
             query.addQueryItem("message", message);
-            query.addQueryItem("v", "5.131");
+            query.addQueryItem("v", "5.199");
             url.setQuery(query);
 
             QNetworkRequest request(url);

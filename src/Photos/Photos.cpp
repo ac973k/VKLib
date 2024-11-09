@@ -24,7 +24,7 @@ namespace VK {
             this->groupId = groupId;
 
             // Step 1: Get upload URL
-            QUrl url(QString("https://api.vk.com/method/photos.getWallUploadServer?group_id=%1&access_token=%2&v=5.131").arg(groupId).arg(accessToken));
+            QUrl url(QString("https://api.vk.com/method/photos.getWallUploadServer?group_id=%1&access_token=%2&v=5.199").arg(groupId).arg(accessToken));
             qDebug() << "url with token: " << url;
             QNetworkRequest request(url);
             QNetworkReply* reply = networkManager.get(request);
@@ -104,7 +104,7 @@ namespace VK {
                 qDebug() << "Image uploaded. Server:" << server << " Photo:" << photo << " Hash:" << hash;
 
                 // Step 3: Save photo
-                QUrl url(QString("https://api.vk.com/method/photos.saveWallPhoto?group_id=%1&photo=%2&server=%3&hash=%4&access_token=%5&v=5.131")
+                QUrl url(QString("https://api.vk.com/method/photos.saveWallPhoto?group_id=%1&photo=%2&server=%3&hash=%4&access_token=%5&v=5.199")
                              .arg(groupId)
                              .arg(photo)
                              .arg(server)

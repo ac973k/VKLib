@@ -16,7 +16,7 @@ namespace VK {
 
             QUrlQuery query;
             query.addQueryItem("access_token", access_token);
-            query.addQueryItem("v", "5.131");
+            query.addQueryItem("v", "5.199");
             link.setQuery(query);
 
             QNetworkRequest request(link);
@@ -34,7 +34,7 @@ namespace VK {
             query.addQueryItem("interval", interval);
             query.addQueryItem("start_time", start_time);
             query.addQueryItem("end_time", end_time);
-            query.addQueryItem("v", "5.131");
+            query.addQueryItem("v", "5.199");
             link.setQuery(query);
 
             QNetworkRequest request(link);
@@ -49,7 +49,7 @@ namespace VK {
             QUrlQuery query;
             query.addQueryItem("access_token", access_token);
             query.addQueryItem("word", word);
-            query.addQueryItem("v", "5.131");
+            query.addQueryItem("v", "5.199");
             link.setQuery(query);
 
             QNetworkRequest request(link);
