@@ -45,7 +45,7 @@
 - [ ] Stories
 - [x] Streaming
 - [x] Translations
-- [ ] Users
+- [x] Users
 - [x] Utils
 - [ ] Video
 - [ ] Wall

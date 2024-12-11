@@ -20,6 +20,7 @@ SOURCES += \
     $$PWD/src/Status/Status.cpp \
     $$PWD/src/Streaming/Streaming.cpp \
     $$PWD/src/Translations/Translations.cpp \
+    $$PWD/src/Users/Users.cpp \
     $$PWD/src/Utils/Utils.cpp \
     $$PWD/src/Wall/Wall.cpp
 
@@ -35,6 +36,7 @@ HEADERS += \
     $$PWD/src/Status/Status.h \
     $$PWD/src/Streaming/Streaming.h \
     $$PWD/src/Translations/Translations.h \
+    $$PWD/src/Users/Users.h \
     $$PWD/src/Utils/Utils.h \
     $$PWD/src/Wall/Wall.h
 
