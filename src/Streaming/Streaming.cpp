@@ -11,46 +11,26 @@ namespace VK {
         }
 
         void Streaming::getServerUrl(const QString &access_token) {
-            QUrl link(QString("https://api.vk.com/method/streaming.getServerUrl"));
+            QUrl link(QString("https://api.vk.com/method/streaming.getServerUrl?access_token=%1&v=5.199").arg(access_token));
             qDebug() << "full url: " << link;
-
-            QUrlQuery query;
-            query.addQueryItem("access_token", access_token);
-            query.addQueryItem("v", "5.199");
-            link.setQuery(query);
 
             QNetworkRequest request(link);
             QNetworkReply* reply = networkManager.get(request);
             connect(reply, &QNetworkReply::finished, this, &Streaming::Finished);
         }
 
-        void Streaming::getStats(const QString &access_token, const QString &type, const QString &interval, const QString &start_time, const QString &end_time) {
-            QUrl link(QString("https://api.vk.com/method/streaming.getStats"));
+        void Streaming::getStats(const QString &access_token, const QString &scopes) {
+            QUrl link(QString("https://api.vk.com/method/streaming.getStats?access_token=%1&%2&v=5.199").arg(access_token).arg(scopes));
             qDebug() << "full url: " << link;
-
-            QUrlQuery query;
-            query.addQueryItem("access_token", access_token);
-            query.addQueryItem("type", type);
-            query.addQueryItem("interval", interval);
-            query.addQueryItem("start_time", start_time);
-            query.addQueryItem("end_time", end_time);
-            query.addQueryItem("v", "5.199");
-            link.setQuery(query);
 
             QNetworkRequest request(link);
             QNetworkReply* reply = networkManager.get(request);
             connect(reply, &QNetworkReply::finished, this, &Streaming::Finished);
         }
 
-        void Streaming::getStem(const QString &access_token, const QString &word) {
-            QUrl link(QString("https://api.vk.com/method/streaming.getStem"));
+        void Streaming::getStem(const QString &access_token, const QString &scopes) {
+            QUrl link(QString("https://api.vk.com/method/streaming.getStem?access_token=%1&%2&v=5.199").arg(access_token).arg(scopes));
             qDebug() << "full url: " << link;
-
-            QUrlQuery query;
-            query.addQueryItem("access_token", access_token);
-            query.addQueryItem("word", word);
-            query.addQueryItem("v", "5.199");
-            link.setQuery(query);
 
             QNetworkRequest request(link);
             QNetworkReply* reply = networkManager.get(request);
