@@ -17,7 +17,7 @@ namespace VK {
 
                 ~Gifts();
 
-                void get(const QString &access_token, const QString &user_id, const QString &count);
+                void get(const QString &access_token, const QString &scopes);
 
             private:
                 QNetworkAccessManager networkManager;
