@@ -17,7 +17,7 @@ namespace VK {
 
                 ~DownloadedGames();
 
-                void getPaidStatus(const QString &access_token, const QString &user_id);
+                void getPaidStatus(const QString &access_token, const QString &scopes);
 
             private:
                 QNetworkAccessManager networkManager;
