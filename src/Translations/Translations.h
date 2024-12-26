@@ -17,7 +17,7 @@ namespace VK {
         explicit Translations(QObject *parent = nullptr);
         ~Translations();
 
-        void translate(const QString &access_token, const QString &texts, const QString &translation_language);
+        void translate(const QString &access_token, const QString &scopes);
 
         private:
         QNetworkAccessManager networkManager;
