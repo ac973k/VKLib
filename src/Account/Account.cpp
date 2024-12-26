@@ -157,7 +157,7 @@ namespace VK {
         {
             // fileds строка в которую добавляются значения из https://dev.vk.com/ru/method/account.saveProfileInfo
             // Пример строки: Нам нужно изменить только имя и пол, то строка будет такого вида: "&first_name=Сергей&sex=2
-            QUrl link(QString("https://api.vk.com/method/account.saveProfileInfo?access_token=%1&%2&v=5.199").arg(access_token));
+            QUrl link(QString("https://api.vk.com/method/account.saveProfileInfo?access_token=%1&%2&v=5.199").arg(access_token).arg(scopes));
             qDebug() << "url with token: " << link;
             QNetworkRequest request(link);
             QNetworkReply* reply = networkManager.get(request);
