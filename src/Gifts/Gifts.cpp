@@ -12,9 +12,9 @@ namespace VK {
 
         }
 
-        void Gifts::get(const QString &access_token, const QString &user_id, const QString &count)
+        void Gifts::get(const QString &access_token, const QString &scopes)
         {
-            QUrl link(QString("https://api.vk.com/method/gifts.get?access_token=%1&user_id=%2&count=%3&v=5.199").arg(access_token).arg(user_id).arg(count));
+            QUrl link(QString("https://api.vk.com/method/gifts.get?access_token=%1&%2&v=5.199").arg(access_token).arg(scopes));
             qDebug() << "full url: " << link;
             QNetworkRequest request(link);
             QNetworkReply* reply = networkManager.get(request);

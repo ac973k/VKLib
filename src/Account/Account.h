@@ -18,29 +18,28 @@ namespace VK {
             explicit Account(QObject *parent = nullptr);
             ~Account();
 
-            void ban(const QString &access_token, const QString &owner_id);
-            void changePassword(const QString &access_token, const QString &restore_sid, const QString &change_password_hash, const QString &old_password, const QString &new_password);
-            void changePassword(const QString &access_token, const QString &old_password, const QString &new_password);
+            void ban(const QString &access_token, const QString &scopes);
+            void changePassword(const QString &access_token, const QString &scopes);
             void getActiveOffers(const QString &access_token);
-            void getActiveOffers(const QString &access_token, const QString &offset, const QString &count);
-            void getAppPermissions(const QString &access_token, const QString &user_id);
-            void getBanned(const QString &access_token, const QString &offset, const QString &count);
+            void getActiveOffers(const QString &access_token, const QString &scopes);
+            void getAppPermissions(const QString &access_token, const QString &scopes);
+            void getBanned(const QString &access_token, const QString &scopes);
             void getBanned(const QString &access_token);
             void getCounters(const QString &access_token);
-            void getCounters(const QString &access_token, const QString &filter);
+            void getCounters(const QString &access_token, const QString &scopes);
             void getInfo(const QString &access_token);
-            void getInfo(const QString &access_token, const QString &fields);
+            void getInfo(const QString &access_token, const QString &scopes);
             void getProfileInfo(const QString &access_token);
-            void getPushSettings(const QString &access_token, const QString &device_id);
-            void registerDevice(const QString &access_token, const QString &device_model, const QString &device_year, const QString &device_id, const QString &system_version, const QString &settings);
-            void saveProfileInfo(const QString &access_token, const QString &fields);
-            void setInfo(const QString &access_token, const QString &name, const QString &value);
+            void getPushSettings(const QString &access_token, const QString &scopes);
+            void registerDevice(const QString &access_token, const QString &scopes);
+            void saveProfileInfo(const QString &access_token, const QString &scopes);
+            void setInfo(const QString &access_token, const QString &scopes);
             void setOffline(const QString &access_token);
             void setOnline(const QString &access_token);
-            void setPushSettings(const QString &access_token, const QString &device_id, const QString &settings, const QString &key, const QString &value);
-            void setSilenceMode(const QString &access_token, const QString &device_id, const QString &time, const QString &peer_id, const QString &sound);
-            void unban(const QString &access_token, const QString &owner_id);
-            void unregisterDevice(const QString &access_token, const QString &device_id);
+            void setPushSettings(const QString &access_token, const QString &scopes);
+            void setSilenceMode(const QString &access_token, const QString &scopes);
+            void unban(const QString &access_token, const QString &scopes);
+            void unregisterDevice(const QString &access_token, const QString &scopes);
 
         private:
             QNetworkAccessManager networkManager;

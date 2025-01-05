@@ -18,8 +18,9 @@ namespace VK {
 
                 ~Calls();
 
-                void forceFinish(const QString &access_token, const QString &call_id);
-                void start(const QString &access_token, const QString &group_id);
+                void forceFinish(const QString &access_token, const QString &scopes);
+                void start(const QString &access_token);
+                void start(const QString &access_token, const QString &scopes);
 
             private:
                 QNetworkAccessManager networkManager;

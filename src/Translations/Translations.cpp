@@ -11,9 +11,9 @@ namespace VK {
 
         }
 
-        void Translations::translate(const QString &access_token, const QString &texts, const QString &translation_language)
+        void Translations::translate(const QString &access_token, const QString &scopes)
         {
-            QUrl link(QString("https://api.vk.com/method/translations.translate?access_token=%1&texts=%2&translation_language=%3&v=5.199").arg(access_token).arg(texts).arg(translation_language));
+            QUrl link(QString("https://api.vk.com/method/translations.translate?access_token=%1&%2&v=5.199").arg(access_token).arg(scopes));
             qDebug() << "full url: " << link;
             QNetworkRequest request(link);
             QNetworkReply* reply = networkManager.get(request);

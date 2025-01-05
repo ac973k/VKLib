@@ -17,10 +17,10 @@ namespace VK {
 
             ~Donut();
 
-            void getFriends(const QString &access_token, const QString &owner_id, const QString &count, const QString fields);
-            void getSubscription(const QString &access_token, const QString &owner_id);
-            void getSubscriptions(const QString &access_token, const QString fields, const QString &count);
-            void isDon(const QString &access_token, const QString &owner_id);
+            void getFriends(const QString &access_token, const QString &scopes);
+            void getSubscription(const QString &access_token, const QString &scopes);
+            void getSubscriptions(const QString &access_token, const QString &scopes);
+            void isDon(const QString &access_token, const QString &scopes);
 
             private:
                 QNetworkAccessManager networkManager;

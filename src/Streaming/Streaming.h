@@ -6,7 +6,6 @@
 #include <QNetworkReply>
 #include <QNetworkRequest>
 #include <QUrl>
-#include <QUrlQuery>
 
 namespace VK {
     namespace Streaming {
@@ -18,8 +17,8 @@ namespace VK {
                 ~Streaming();
 
                 void getServerUrl(const QString &access_token);
-                void getStats(const QString &access_token, const QString &type, const QString &interval, const QString &start_time, const QString &end_time);
-                void getStem(const QString &access_token, const QString &word);
+                void getStats(const QString &access_token, const QString &scopes);
+                void getStem(const QString &access_token, const QString &scopes);
 
             private:
                 QNetworkAccessManager networkManager;
