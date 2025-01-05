@@ -16,6 +16,7 @@ SOURCES += \
     $$PWD/src/DownloadedGames/DownloadedGames.cpp \
     $$PWD/src/Gifts/Gifts.cpp \
     $$PWD/src/Groups/Groups.cpp \
+    $$PWD/src/Likes/Likes.cpp \
     $$PWD/src/Photos/Photos.cpp \
     $$PWD/src/Status/Status.cpp \
     $$PWD/src/Streaming/Streaming.cpp \
@@ -32,6 +33,7 @@ HEADERS += \
     $$PWD/src/DownloadedGames/DownloadedGames.h \
     $$PWD/src/Gifts/Gifts.h \
     $$PWD/src/Groups/Groups.h \
+    $$PWD/src/Likes/Likes.h \
     $$PWD/src/Photos/Photos.h \
     $$PWD/src/Status/Status.h \
     $$PWD/src/Streaming/Streaming.h \

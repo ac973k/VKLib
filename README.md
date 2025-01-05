@@ -24,7 +24,7 @@
 - [x] Gifts
 - [ ] Groups
 - [ ] LeadForms
-- [ ] Likes
+- [x] Likes
 - [ ] Market
 - [ ] Messages
 - [ ] Newsfeed
