@@ -11,7 +11,7 @@
 - [ ] Ads
 - [ ] AppWidgets
 - [ ] Apps
-- [ ] Asr
+- [ ] Asr - VK пока закрыл доступ к расшифровке. Подождём немного.
 - [ ] Board
 - [ ] Bugtracker
 - [x] Calls

@@ -17,8 +17,7 @@ namespace VK {
                 explicit Status(QObject *parent = nullptr);
                 ~Status();
 
-                void getUser(const QString &access_token, const QString &scopes);
-                void getGroup(const QString &access_token, const QString &scopes);
+                void get(const QString &access_token, const QString &scopes);
                 void set(const QString &access_token, const QString &scopes);
 
             private:

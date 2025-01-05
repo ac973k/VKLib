@@ -30,6 +30,15 @@ namespace VK {
             connect(reply, &QNetworkReply::finished, this, &Calls::Finished);
         }
 
+        void Calls::start(const QString &access_token)
+        {
+            QUrl link(QString("https://api.vk.com/method/calls.start?access_token=%1&%2&v=5.199").arg(access_token));
+            qDebug() << "full url: " << link;
+            QNetworkRequest request(link);
+            QNetworkReply* reply = networkManager.get(request);
+            connect(reply, &QNetworkReply::finished, this, &Calls::Finished);
+        }
+
         void Calls::Finished() {
             QNetworkReply *reply = qobject_cast<QNetworkReply*>(sender());
             if (!reply) {
