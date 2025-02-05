@@ -23,7 +23,7 @@ namespace VK {
 
         void VKAuth::startAuth(const QString &appId, const QString &scopes)
         {
-            QString authUrl = QString("https://oauth.vk.com/authorize?client_id=%1&display=page&redirect_uri=https://oauth.vk.com/blank.html&scope=%2&response_type=token&v=5.131")
+            QString authUrl = QString("https://oauth.vk.com/authorize?client_id=%1&display=page&redirect_uri=https://oauth.vk.com/blank.html&scope=%2&response_type=token&v=5.199")
                                   .arg(appId).arg(scopes);
             setUrl(QUrl(authUrl));
             show();
