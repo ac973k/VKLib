@@ -18,6 +18,7 @@ SOURCES += \
     $$PWD/src/Groups/Groups.cpp \
     $$PWD/src/Likes/Likes.cpp \
     $$PWD/src/Photos/Photos.cpp \
+    $$PWD/src/Stats/Stats.cpp \
     $$PWD/src/Status/Status.cpp \
     $$PWD/src/Streaming/Streaming.cpp \
     $$PWD/src/Translations/Translations.cpp \
@@ -35,6 +36,7 @@ HEADERS += \
     $$PWD/src/Groups/Groups.h \
     $$PWD/src/Likes/Likes.h \
     $$PWD/src/Photos/Photos.h \
+    $$PWD/src/Stats/Stats.h \
     $$PWD/src/Status/Status.h \
     $$PWD/src/Streaming/Streaming.h \
     $$PWD/src/Translations/Translations.h \
