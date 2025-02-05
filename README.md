@@ -11,7 +11,6 @@
 - [ ] Ads
 - [ ] AppWidgets
 - [ ] Apps
-- [ ] Asr - VK пока закрыл доступ к расшифровке. Подождём немного.
 - [ ] Board
 - [ ] Bugtracker
 - [x] Calls
@@ -38,7 +37,7 @@
 - [ ] PrettyCards
 - [ ] Search
 - [ ] Secure
-- [ ] Stats
+- [x] Stats
 - [x] Status
 - [ ] Storage
 - [ ] Store
