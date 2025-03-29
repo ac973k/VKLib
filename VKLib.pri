@@ -17,6 +17,7 @@ SOURCES += \
     $$PWD/src/Gifts/Gifts.cpp \
     $$PWD/src/Groups/Groups.cpp \
     $$PWD/src/Likes/Likes.cpp \
+    $$PWD/src/Notifications/Notifications.cpp \
     $$PWD/src/Photos/Photos.cpp \
     $$PWD/src/Stats/Stats.cpp \
     $$PWD/src/Status/Status.cpp \
@@ -35,6 +36,7 @@ HEADERS += \
     $$PWD/src/Gifts/Gifts.h \
     $$PWD/src/Groups/Groups.h \
     $$PWD/src/Likes/Likes.h \
+    $$PWD/src/Notifications/Notifications.h \
     $$PWD/src/Photos/Photos.h \
     $$PWD/src/Stats/Stats.h \
     $$PWD/src/Status/Status.h \
@@ -50,4 +52,18 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 DISTFILES += \
-    $$PWD/README.md
+    $$PWD/README.md \
+    $$PWD/docs/Account.md \
+    $$PWD/docs/Auth.md \
+    $$PWD/docs/Calls.md \
+    $$PWD/docs/Donut.md \
+    $$PWD/docs/DownloadedGames.md \
+    $$PWD/docs/Gifts.md \
+    $$PWD/docs/Likes.md \
+    $$PWD/docs/Notifications.md \
+    $$PWD/docs/Stats.md \
+    $$PWD/docs/Status.md \
+    $$PWD/docs/Streaming.md \
+    $$PWD/docs/Translations.md \
+    $$PWD/docs/Users.md \
+    $$PWD/docs/Utils.md
